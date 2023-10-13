@@ -8,7 +8,7 @@ import styles from "./Contact.module.css";
 export const Contact = () => {
     return (
         <div className={`mt-6 py-5 ${styles.contact__container}`}>
-            <Shell heading="Contact us" textColor="whiteText">
+            <Shell id="Contact" heading="Contact us" textColor="whiteText">
                 <div className="my-3 is-flex is-flex-wrap-wrap	 is-justify-content-space-between">
                     <p className="whiteText title">Have a project in mind?<br />{"Let's make it happen"}</p>
                     <div>

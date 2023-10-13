@@ -10,7 +10,7 @@ const brands = ["visa", "tyme-bank", "distell", "spotify", "microsoft", "engen",
  */
 export const Industries = () => {
     return (
-        <Shell heading="You’ll be in good company">
+        <Shell id="Industries" heading="You’ll be in good company">
             <p className="blackText title">Trusted by leading brands</p>
             <div className="columns mt-5">
                 {

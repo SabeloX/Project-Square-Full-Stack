@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./Navbar.module.css";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 /**
  * The Navbar component represents the navigation bar of the website.
@@ -43,18 +44,28 @@ export const Navbar = () => {
                     <div className={`columns p-5`}>
                         {
                             ["Services","Industries", "Cases", "Contact"].map((item, index) => (
-                                <a href={`#${item}`} className={`column is-flex is-align-items-center navbar-item ${styles.nav__text}`} key={index + item}>
+                                <Link
+                                    to={`${item}`}
+                                    className={`column is-flex is-align-items-center navbar-item ${styles.nav__text}`}
+                                    key={index + item}
+                                    smooth
+                                    onClick={() => isActive === "is-active" && setIsActive("")}
+                                >
                                     { item }
-                                </a>
+                                </Link>
                             ))
                         }
                     </div>
                 </div>
                 <div className={`navbar-end ${isActive === "" && "is-hidden-touch"}`}>
                     <div className="navbar-item">
-                        <a className={`button is-rounded`}>
+                        <Link 
+                            onClick={() => isActive === "is-active" && setIsActive("")}
+                            smooth to="Contact"
+                            className={`button is-rounded`}
+                        >
                             <strong className={styles.nav__button__font}>{"Let's Talk"}</strong>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
