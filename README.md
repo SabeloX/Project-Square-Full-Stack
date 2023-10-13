@@ -2,10 +2,6 @@
 
 A fully responsive landing page that utilises MongoDB as a database to store trusted brands.
 
-## Demo
-
-Visit the hosted version on https://project-square.vercel-full-stack.app/
-
 ## Installation & Running
 
 First clone the project:
