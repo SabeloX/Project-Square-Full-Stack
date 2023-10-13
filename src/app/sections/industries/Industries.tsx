@@ -1,7 +1,7 @@
 import { Shell } from "@/components/shell/Shell"
 import Image from "next/image"
 import styles from "./Industries.module.css";
-import { fetchBrands } from "@/lib/utils/get_brands";
+import { fetchBrands } from "@/lib/utils/fetch_brands";
 
 /**
  * Represents a brand with specific properties.

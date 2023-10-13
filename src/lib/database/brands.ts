@@ -5,6 +5,10 @@ let client;
 let db: Db | undefined;
 let brands: Collection;
 
+/**
+ * Initializes the database connection and sets up the 'brands' collection.
+ * @throws {Error} Throws an error if the database connection fails.
+ */
 const init = async () => {
     if (db) return;
     try {
@@ -17,10 +21,18 @@ const init = async () => {
     }
 }
 
-export const getBrands = async () => {
+/**
+ * Retrieves brands based on specified categories.
+ * @param {string[]} categories - An array of category names to filter brands.
+ * @returns {Promise<{ brands: object[] }>} A promise that resolves to an object containing the brands.
+ */
+export const getBrands = async (categories: string[]) => {
     try {
         if (!brands) await init();
-        const results = await brands.find({}).map(item => ({ ...item, _id: item._id.toString() })).toArray();
+        const results = await brands
+            .find(categories.length === 0 ? {} : { category: { $in: categories} })
+            .map(item => ({ ...item, _id: item._id.toString() }))
+            .toArray();
         return { brands: results }
     }
     catch (error) {
