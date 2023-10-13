@@ -1,0 +1,24 @@
+.nav__background {
+    background-color: var(--primaryMain) !important;
+}
+
+.nav__text {
+    color: var(--textWhite) !important;
+    font-size: 0.875rem;
+}
+.nav__text:hover {
+    color: var(--primaryMain) !important;
+}
+
+.nav__button__font {
+    color: var(--primaryMain) !important;
+    font-size: 0.875rem;
+}
+
+.nav__burgerMenu {
+    background-color: var(--primaryMain);
+}
+
+.nav__burgerMenu__color {
+    color: var(--textWhite) !important;
+}

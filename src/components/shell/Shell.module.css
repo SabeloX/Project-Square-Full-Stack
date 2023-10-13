@@ -1,0 +1,8 @@
+.shell__headingContainer {
+    gap: 10px
+}
+
+.shell__container {
+    gap: 20px;
+    width: 100%;
+}

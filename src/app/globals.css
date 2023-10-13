@@ -1,0 +1,35 @@
+:root {
+  --primaryMain: #70259B;
+  --primaryActive: #D100C9;
+  --primaryDark: #430964;
+  --textWhite: #ffffff;
+  --textWhite100: #fafafa;
+  --textWhite200: #f5f5f5;
+  --textBlack: #000000;
+  --textBlack700: #242424;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-body {
+  padding: 0
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.whiteText {
+  color: var(--textWhite) !important;
+}
+
+.blackText {
+  color: var(--textBlack) !important
+}
+
+.imageStyles {
+  object-fit: cover;
+}
