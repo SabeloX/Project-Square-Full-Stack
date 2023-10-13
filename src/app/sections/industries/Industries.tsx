@@ -3,12 +3,17 @@ import Image from "next/image"
 import styles from "./Industries.module.css";
 import { fetchBrands } from "@/lib/utils/get_brands";
 
+/**
+ * Represents a brand with specific properties.
+ * @property {string} name - The name of the brand.
+ * @property {string} category - The category or type of the brand.
+ * @property {string} _id - The unique identifier of the brand.
+ */
 export type Brand = {
     name: string;
     category: string;
     _id: string;
 }
-
 
 /**
  * A React component that displays a list of trusted brands in separate columns.
