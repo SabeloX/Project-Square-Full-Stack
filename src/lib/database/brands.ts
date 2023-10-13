@@ -20,7 +20,7 @@ const init = async () => {
 export const getBrands = async () => {
     try {
         if (!brands) await init();
-        const results = await brands.find({}).map(item => ({ ...item, _id: item._id.toString() }));
+        const results = await brands.find({}).map(item => ({ ...item, _id: item._id.toString() })).toArray();
         return { brands: results }
     }
     catch (error) {
